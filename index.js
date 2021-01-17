@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express()
 
-const port = 3000
+const port = 8080
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   return res.send('This is changed immediately!')
 })
 
-app.listen(port, function () {
+app.listen(port, () => {
   console.log(`Server running at port ${port}`)
 })
+
+module.exports = app
